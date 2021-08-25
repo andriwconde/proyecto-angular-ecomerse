@@ -9,6 +9,7 @@ import { ProductsService } from '../services/products.service';
 })
 export class ProductDetailComponent implements OnInit {
 product:any;
+pictures:any =[]
   constructor(
     private activatedRoute:ActivatedRoute,
     private productsService:ProductsService
@@ -24,6 +25,7 @@ product:any;
     const response:any = await this.productsService.getById(id)
     console.log(response)
     this.product = response
+    this.pictures = response.pictures
   }
   ngOnInit(): void {
   }

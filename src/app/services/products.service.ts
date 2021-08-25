@@ -10,10 +10,10 @@ export class ProductsService {
     private http:HttpClient
   ) { }
     getAll(){
-      return this.http.get("https://jsonplaceholder.typicode.com/posts").toPromise()
+      return this.http.get("https://api.mercadolibre.com/sites/MLA/search?q=ipod#json").toPromise()
     }
 
     getById(id:string){
-      return this.http.get("https://jsonplaceholder.typicode.com/posts/"+id).toPromise()
+      return this.http.get("https://api.mercadolibre.com/items/"+id).toPromise()
     }
 }
