@@ -9,11 +9,13 @@ export class ProductsService {
   constructor(
     private http:HttpClient
   ) { }
-    getAll(){
+    getAllProducts(){
       return this.http.get("https://api.mercadolibre.com/sites/MLA/search?q=ipod#json").toPromise()
     }
-
+    
     getById(id:string){
       return this.http.get("https://api.mercadolibre.com/items/"+id).toPromise()
     }
+
+    
 }

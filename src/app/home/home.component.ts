@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   }
    
   async getProducts(){
-    const response:any = await this.productsService.getAll()
+    const response:any = await this.productsService.getAllProducts()
     this.products = response.results
   }
   
